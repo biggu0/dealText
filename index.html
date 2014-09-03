@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>文本处理</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h2>1)text-overflow:clip|ellipsis;</h2>
+	<p style="background:#535353;width:30%;border:1px solid #000;color:#e3e3e9;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;" title="宽度30%的段落，超过的区域需要显示为省略号，可以采用text-overflow,overflow,white-space">可以采用text-overflow,overflow,white-space，宽度30%的段落，超过的区域需要显示为省略号，</p>
+	<h2>2)word-wrap:normal|break-word;</h2>
+	<p style="background:#545454;width:30%;border:1px solid #000;color:#e3e3e9;word-wrap:break-word" >文本换行，css3将ie的word-wrap引入，normal时只在浏览器识别的默认位置换行，break-word在边界内换行（不截断英文单词）http://abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd</p>
+	<p style="background:#545454;width:30%;border:1px solid #000;color:#e3e3e9;" >ps不加word-wrap:break-word的对比效果http://abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd</p>
+	<pre style="background:#545454;width:30%;border:1px solid #000;color:#e3e3e9;word-wrap:break-word">火狐看这个：pre的话应该是没有作用，chrome除外，http://abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd</pre>
+	<h2>3)word-break:normal|break-all|keep-all</h2>
+	<ul>
+		<li>break-all 强行截断英文单词，词内换行</li>
+		<li>keep-all 不允许字断开，整个英文单词过长时会超出容器</li>
+	</ul>
+	<p style="background:#545454;width:30%;border:1px solid #000;color:#e3e3e9;word-break:keep-all" >keep-all的效果:http://abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd</p>
+	<p style="background:#545454;width:30%;border:1px solid #000;color:#e3e3e9;word-break:break-all" >break-all的效果:http://abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd</p>
+	<h2>4)white-space:normal|pre|nowrap|pre-line|pre-wrap|inherit</h2>
+	<ul>
+		<li>normal 默认，忽略空白符，忽略原有换行符。自动换行，不会有滚动条</li>
+		<li>pre  类似与pre标签的效果，原有的格式都会保留</li>
+		<li>nowrap 忽略空白符，文本不换行，直到遇到换行（与text-overflow合用）</li>
+		<li>pre-wrap pre的基础上保留空白符和换行符</li>
+		<li>pre-line 在normal的基础上保留换行符</li>
+	</ul>
+	<p style="background:#545454;width:30%;white-space:normal">
+	********************************
+	多行文本
+	和           white-space
+	</p>
+	<p style="background:#545454;width:30%;white-space:pre">
+	********************************
+	多行文本
+	和            white-space
+	</p>
+	<p style="background:#545454;width:30%;white-space:nowrap">
+	********************************
+	多行文本
+	和            white-space
+	</p>
+	<p style="background:#545454;width:30%;white-space:pre-wrap">
+	********************************
+	多行文本
+	和  white-space
+	</p>
+	<p style="background:#545454;width:30%;white-space:pre-line">
+	********************************
+	多行文本
+	和            white-space
+	</p>
+</body>
+</html>
